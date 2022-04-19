@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Inherit</title>
+</head>
+
+<body>
+  <script>
+    function Father() {
+
+    }
+    Father.prototype.lastName = 'Huan'
+    function Son() { }
+    Son.prototype = new Father()
+    var son = new Son()
+    Son.prototype.name = 'lili'
+
+    function Son1() { }
+    Son1.prototype = Father
+    var son1 = new Son1()
+
+  </script>
+</body>
+
+</html>

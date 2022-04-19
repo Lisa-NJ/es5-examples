@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Function - str reverse</title>
+</head>
+
+<body>
+  <script>
+    let connect = function ({ a, b, c, d }) {
+      console.log(a);
+    }
+    connect({
+      b: 2,
+      c: 3,
+      a: 1, //必须写成 a:xxx 的形式
+      d: 4
+    })
+
+    function Car() {
+
+    }
+    var car = new Car()
+
+    function reverse() {
+      var str = window.prompt('input')
+      if (str == '') return ''
+      var result = ''
+      for (var i = str.length - 1; i >= 0; i--) {
+        //result[str.length - 1 - i] = str[i] // 不能这样赋值！！！
+        result += str.charAt(i)  //str[i]
+      }
+      return result
+    }
+
+    console.log(reverse())
+  </script>
+</body>
+
+</html>

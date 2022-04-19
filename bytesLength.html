@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bytes Length</title>
+</head>
+
+<body>
+  <script>
+    //需求：求字符串的字节长度
+    //1.当前字符位的 unicode > 255，那么该字符字节长度为 2
+    //2. <= 255，为1
+    // charCodeAt - 返回 unicode 编码
+    var str = 'abc流水'
+    function bytesLength(str) {
+      var count = str.length
+      for (var i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) > 255) {
+          count++
+        }
+      }
+      return count
+    }
+
+  </script>
+</body>
+
+</html>

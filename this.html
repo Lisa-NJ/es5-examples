@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>This</title>
+</head>
+
+<body>
+  <script>
+    function ccc() {
+      function getAge() {
+        age++
+      }
+      var age = 10
+      return getAge
+    }
+    var g = ccc()
+    g()
+
+    var name = '222'
+    var a = {
+      name: '111',
+      say: function () {
+        console.log(this.name);
+      }
+    }
+    var fun = a.say;
+    fun()   //222 
+    a.say() //111 ***
+    var b = {
+      name: '333',
+      say: function (fun) {
+        fun()
+      }
+    }
+    b.say(a.say)  //222 难
+    b.say = a.say
+    b.say()       //333
+
+
+  </script>
+</body>
+
+</html>
